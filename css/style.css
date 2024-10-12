@@ -1054,7 +1054,7 @@
 
 /*** Contact Start ***/
 .contact {
-    background: linear-gradient(rgba(217, 109, 21, 0.9), rgba(217, 119, 21, 0.9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(255, 145,77, 0.9), rgba(255, 145, 77, 0.9)), url(../img/carousel-1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
