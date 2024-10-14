@@ -87,66 +87,66 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  if (Apform) {
-    Apform.addEventListener("submit", async (e) => {
-      e.preventDefault();
+//   if (Apform) {
+//     Apform.addEventListener("submit", async (e) => {
+//       e.preventDefault();
 
-      showAlert("Sending your appointment request... Please wait.");
-      toggleSubmitButton(Apform, true);
+//       showAlert("Sending your appointment request... Please wait.");
+//       toggleSubmitButton(Apform, true);
 
-      const ApData = {
-        to: "drajeetagoel@gmail.com",//email
-        subject:
-          document.getElementById("Apname").value + " Requested an Appointment",
-        text: `<h4>New Appointment Request</h4>
-                <p><strong>Name:</strong> ${
-                  document.getElementById("Apname").value
-                }</p>
-                <p><strong>Email:</strong> ${
-                  document.getElementById("Apemail").value
-                }</p>
-                <p><strong>Phone:</strong> ${
-                  document.getElementById("Apphone").value
-                }</p>
-                <p><strong>Gender:</strong> ${
-                  document.getElementById("Apgender").value
-                }</p>
-                <p><strong>Date:</strong> ${
-                  document.getElementById("Apdate").value
-                }</p>
-                <p><strong>Department:</strong> ${
-                  document.getElementById("Apdepartment").value
-                }</p>
-                <p><strong>Comment:</strong> ${
-                  document.getElementById("Apcomment").value
-                }</p>`,
-      };
+//       const ApData = {
+//         to: "drajeetagoel@gmail.com",//email
+//         subject:
+//           document.getElementById("Apname").value + " Requested an Appointment",
+//         text: `<h4>New Appointment Request</h4>
+//                 <p><strong>Name:</strong> ${
+//                   document.getElementById("Apname").value
+//                 }</p>
+//                 <p><strong>Email:</strong> ${
+//                   document.getElementById("Apemail").value
+//                 }</p>
+//                 <p><strong>Phone:</strong> ${
+//                   document.getElementById("Apphone").value
+//                 }</p>
+//                 <p><strong>Gender:</strong> ${
+//                   document.getElementById("Apgender").value
+//                 }</p>
+//                 <p><strong>Date:</strong> ${
+//                   document.getElementById("Apdate").value
+//                 }</p>
+//                 <p><strong>Department:</strong> ${
+//                   document.getElementById("Apdepartment").value
+//                 }</p>
+//                 <p><strong>Comment:</strong> ${
+//                   document.getElementById("Apcomment").value
+//                 }</p>`,
+//       };
 
-      try {
-        // Sending data to PHP server instead of Node.js
-        const response = await fetch("send_email.php", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(emailData),
-        });
-        console.log(emailData); // Check if the email data is correct
-        if (response.ok) {
-          showAlert("Your email has been sent successfully!");
-        } else {
-          const errorText = await response.text();
-          showAlert(
-            "Failed to send email. Server responded with: " + errorText
-          );
-        }
-      } catch (error) {
-        showAlert(
-          "An error occurred while sending the email: " + error.message
-        );
-      } finally {
-        toggleSubmitButton(form, false);
-      }
-    });
-  }
-});
+//       try {
+//         // Sending data to PHP server instead of Node.js
+//         const response = await fetch("send_email.php", {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//           },
+//           body: JSON.stringify(emailData),
+//         });
+//         console.log(emailData); // Check if the email data is correct
+//         if (response.ok) {
+//           showAlert("Your email has been sent successfully!");
+//         } else {
+//           const errorText = await response.text();
+//           showAlert(
+//             "Failed to send email. Server responded with: " + errorText
+//           );
+//         }
+//       } catch (error) {
+//         showAlert(
+//           "An error occurred while sending the email: " + error.message
+//         );
+//       } finally {
+//         toggleSubmitButton(form, false);
+//       }
+//     });
+//   }
+ });
