@@ -1196,3 +1196,9 @@
     background-attachment: fixed;
 
 }
+
+.container {
+    display: flex; /* or display: grid; */
+    flex-direction: column; /* For vertical spacing */
+    gap: 20px; /* Adjust the value as needed */
+}
